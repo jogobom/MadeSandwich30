@@ -22,6 +22,7 @@ jobs:
     - name: Analysing the code with flake8
       run: |
         pipenv run flake8 $(git ls-files '*.py')
-    - name: Run behave
+    - name: Run behave on random sandwich module
+      working-directory: ./random_sandwich
       run: |
         pipenv run behave
